@@ -9,13 +9,31 @@
 import UIKit
 
 class SearchView: UIView {
+    
+    public lazy var travelFromlabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 1
+        label.font = UIFont.preferredFont(forTextStyle: .title3)
+        label.text = "Where You Coming From"
+        return label
+    }()
+    
+    public lazy var travelFromSarchBar: UISearchBar = {
+        let sb = UISearchBar()
+        sb.autocapitalizationType = .words
+        sb.placeholder = "enter your location"
+        sb.backgroundColor = .systemTeal
+        return sb
+    }()
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        commonInit()
     }
-    */
+    
+    private func commonInit() {
+        
+        
+    }
 
 }
