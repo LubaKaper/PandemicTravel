@@ -9,6 +9,12 @@
 import UIKit
 
 class SearchViewController: UIViewController {
+    
+    private var detailView = SearchView()
+    
+    override func loadView() {
+        view = detailView
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
