@@ -66,5 +66,9 @@ class SearchView: UIView {
             travelFromlabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -10)
         ])
     }
+    
+    private func setupTravelFromSearchBarConstraints() {
+        
+    }
 
 }
