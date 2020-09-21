@@ -55,6 +55,8 @@ class SearchView: UIView {
     private func commonInit() {
         
         setupTravelFromLabelContstrints()
+        setupTravelFromSearchBarConstraints()
+        setupTravelToLabelContstrints()
     }
     
     private func setupTravelFromLabelContstrints() {
@@ -68,7 +70,23 @@ class SearchView: UIView {
     }
     
     private func setupTravelFromSearchBarConstraints() {
-        
+        addSubview(travelFromSarchBar)
+        travelFromSarchBar.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            travelFromSarchBar.topAnchor.constraint(equalTo: travelFromlabel.bottomAnchor, constant: 20),
+            travelFromSarchBar.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            travelFromSarchBar.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20)
+        ])
+    }
+    
+    private func setupTravelToLabelContstrints() {
+        addSubview(travelTolabel)
+        travelTolabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            travelTolabel.topAnchor.constraint(equalTo: travelFromSarchBar.bottomAnchor, constant: 30),
+            travelTolabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 10),
+            travelTolabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -10)
+        ])
     }
 
 }
