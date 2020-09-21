@@ -10,11 +10,26 @@ import UIKit
 
 class SearchView: UIView {
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        travelFromlabel.clipsToBounds = true
+        travelFromlabel.layer.cornerRadius = 13
+        travelFromSarchBar.clipsToBounds = true
+        travelFromSarchBar.layer.cornerRadius = 13
+        travelTolabel.clipsToBounds = true
+        travelTolabel.layer.cornerRadius = 13
+        travelToSarchBar.clipsToBounds = true
+        travelToSarchBar.layer.cornerRadius = 13
+    }
+    
     public lazy var travelFromlabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
-        label.font = UIFont.preferredFont(forTextStyle: .title3)
+        label.textAlignment = .center
+        label.font = UIFont.preferredFont(forTextStyle: .title1)
+        label.textColor = .white
         label.text = "Where You Coming From"
+        label.backgroundColor = .systemTeal
         return label
     }()
     
@@ -22,14 +37,16 @@ class SearchView: UIView {
         let sb = UISearchBar()
         sb.autocapitalizationType = .words
         sb.placeholder = "enter your location"
-        sb.backgroundColor = .systemTeal
+        //sb.backgroundColor = .systemTeal
         return sb
     }()
     
     public lazy var travelTolabel: UILabel = {
            let label = UILabel()
            label.numberOfLines = 1
-           label.font = UIFont.preferredFont(forTextStyle: .title3)
+           label.textAlignment = .center
+           label.font = UIFont.preferredFont(forTextStyle: .title1)
+           label.textColor = .white
            label.text = "Where Do You Want To Go"
            return label
        }()
