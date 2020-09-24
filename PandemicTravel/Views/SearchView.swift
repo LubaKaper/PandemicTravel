@@ -59,6 +59,13 @@ class SearchView: UIView {
         return sb
     }()
     
+    public lazy var goButton: UIButton = {
+        let button = UIButton()
+        
+        button.backgroundColor = .systemTeal
+        return button
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
         commonInit()
