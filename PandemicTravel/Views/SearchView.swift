@@ -60,10 +60,21 @@ class SearchView: UIView {
     }()
     
     public lazy var goButton: UIButton = {
-        let button = UIButton()
+        let btn = UIButton()
         
-        button.backgroundColor = .systemTeal
-        return button
+        //btn.backgroundColor = .systemTeal
+        btn.frame = CGRect(x: 285, y: 485, width: 100, height: 200)
+           btn.setTitle("Go", for: .normal)
+           btn.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+           btn.clipsToBounds = true
+           btn.layer.cornerRadius = 40
+           btn.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+           btn.layer.borderWidth = 3.0
+           //btn.addTarget(self,action: #selector(DestinationVC.buttonTapped), for: UIControlEvent.touchUpInside)
+//           if let window = UIApplication.shared.keyWindow {
+//               window.addSubview(btn)
+//           }
+        return btn
     }()
     
     override init(frame: CGRect) {
@@ -81,6 +92,7 @@ class SearchView: UIView {
         setupTravelFromLabelContstrints()
         setupTravelFromSearchBarConstraints()
         setupTravelToLabelContstrints()
+        setupGoButtonConstraints()
     }
     
     private func setupTravelFromLabelContstrints() {
@@ -113,4 +125,15 @@ class SearchView: UIView {
         ])
     }
 
+    private func setupGoButtonConstraints() {
+        addSubview(goButton)
+        goButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            goButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -50),
+            goButton.heightAnchor.constraint(equalToConstant: 80),
+            goButton.widthAnchor.constraint(equalToConstant: 80),
+            goButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor)
+
+        ])
+    }
 }
