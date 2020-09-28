@@ -70,6 +70,9 @@ class SearchView: UIView {
            btn.layer.cornerRadius = 40
            btn.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
            btn.layer.borderWidth = 3.0
+       // btn.layer.shadowColor = #colorLiteral(red: 0.5960784314, green: 0.5960784314, blue: 0.6156862745, alpha: 1)
+       // btn.layer.shadowOpacity = 0.1
+        btn.layer.shadowOffset = CGSize(width: 1, height: 1)
            //btn.addTarget(self,action: #selector(DestinationVC.buttonTapped), for: UIControlEvent.touchUpInside)
 //           if let window = UIApplication.shared.keyWindow {
 //               window.addSubview(btn)
