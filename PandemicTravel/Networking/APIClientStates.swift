@@ -9,11 +9,11 @@
 import Foundation
 import Combine
 
-struct DateDataWrapper: Decodable {
-    let hits: [Date]
-}
+//struct DateDataWrapper: Decodable {
+//    let hits: [DateData]
+//}
 
-struct Date: Decodable, Hashable {
+struct DateData: Decodable, Hashable {
     let date: String
     let state: String
     let cases: Int
@@ -21,7 +21,7 @@ struct Date: Decodable, Hashable {
 }
 
 class APIClientStates {
-    public func searchStates(for query: String) -> AnyPublisher<[Date], Error> {
+    public func searchStates(for query: String) -> AnyPublisher<[DateData], Error> {
         let lastdays = 30
         let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "new york"
         
@@ -30,8 +30,8 @@ class APIClientStates {
         
         return URLSession.shared.dataTaskPublisher(for: url)
             .map(\.data)
-            .decode(type: DateDataWrapper.self, decoder: JSONDecoder())
-            .map { $0.hits }
+            .decode(type: [DateData].self, decoder: JSONDecoder())
+            .map { $0.self }
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
 
