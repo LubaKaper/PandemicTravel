@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D219316255347650033CAFA /* APIClientStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D219315255347650033CAFA /* APIClientStates.swift */; };
+		8D2193182555C4690033CAFA /* APIClientCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2193172555C4690033CAFA /* APIClientCountry.swift */; };
 		8DED625425168B38001AF9C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DED625325168B38001AF9C8 /* AppDelegate.swift */; };
 		8DED625625168B38001AF9C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DED625525168B38001AF9C8 /* SceneDelegate.swift */; };
 		8DED625825168B38001AF9C8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DED625725168B38001AF9C8 /* SearchViewController.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D219315255347650033CAFA /* APIClientStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientStates.swift; sourceTree = "<group>"; };
+		8D2193172555C4690033CAFA /* APIClientCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientCountry.swift; sourceTree = "<group>"; };
 		8DED625025168B38001AF9C8 /* PandemicTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PandemicTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DED625325168B38001AF9C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DED625525168B38001AF9C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D219314255347490033CAFA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8D219315255347650033CAFA /* APIClientStates.swift */,
+				8D2193172555C4690033CAFA /* APIClientCountry.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		8DED624725168B38001AF9C8 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +98,7 @@
 		8DED625225168B38001AF9C8 /* PandemicTravel */ = {
 			isa = PBXGroup;
 			children = (
+				8D219314255347490033CAFA /* Networking */,
 				8DED627A25168D8B001AF9C8 /* ViewControllers */,
 				8DED627725168D5B001AF9C8 /* Views */,
 				8DED625325168B38001AF9C8 /* AppDelegate.swift */,
@@ -227,9 +241,11 @@
 				B764DD412591285200533F28 /* LocationResultController.swift in Sources */,
 				B764DD3D2591238300533F28 /* LocationResultsView.swift in Sources */,
 				8DED627925168D84001AF9C8 /* SearchView.swift in Sources */,
+				8D219316255347650033CAFA /* APIClientStates.swift in Sources */,
 				8DED625825168B38001AF9C8 /* SearchViewController.swift in Sources */,
 				8DED625425168B38001AF9C8 /* AppDelegate.swift in Sources */,
 				8DED627625168BA3001AF9C8 /* InfoViewController.swift in Sources */,
+				8D2193182555C4690033CAFA /* APIClientCountry.swift in Sources */,
 				8DED625625168B38001AF9C8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
