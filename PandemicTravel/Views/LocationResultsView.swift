@@ -58,5 +58,16 @@ class LocationResultsView: UIView {
             imageHeader.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.2),
         ])
     }
+    
+    private func setupCollectionView() {
+        addSubview(collectionView)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: imageHeader.bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+    }
 
 }
