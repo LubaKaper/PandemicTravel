@@ -15,6 +15,8 @@
 		8DED626B25168B3D001AF9C8 /* PandemicTravelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DED626A25168B3D001AF9C8 /* PandemicTravelTests.swift */; };
 		8DED627625168BA3001AF9C8 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DED627525168BA3001AF9C8 /* InfoViewController.swift */; };
 		8DED627925168D84001AF9C8 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DED627825168D84001AF9C8 /* SearchView.swift */; };
+		B764DD3D2591238300533F28 /* LocationResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B764DD3C2591238300533F28 /* LocationResultsView.swift */; };
+		B764DD412591285200533F28 /* LocationResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B764DD402591285200533F28 /* LocationResultController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		8DED626C25168B3D001AF9C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DED627525168BA3001AF9C8 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		8DED627825168D84001AF9C8 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		B764DD3C2591238300533F28 /* LocationResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResultsView.swift; sourceTree = "<group>"; };
+		B764DD402591285200533F28 /* LocationResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResultController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				8DED627825168D84001AF9C8 /* SearchView.swift */,
+				B764DD3C2591238300533F28 /* LocationResultsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 			children = (
 				8DED625725168B38001AF9C8 /* SearchViewController.swift */,
 				8DED627525168BA3001AF9C8 /* InfoViewController.swift */,
+				B764DD402591285200533F28 /* LocationResultController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -218,6 +224,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B764DD412591285200533F28 /* LocationResultController.swift in Sources */,
+				B764DD3D2591238300533F28 /* LocationResultsView.swift in Sources */,
 				8DED627925168D84001AF9C8 /* SearchView.swift in Sources */,
 				8DED625825168B38001AF9C8 /* SearchViewController.swift in Sources */,
 				8DED625425168B38001AF9C8 /* AppDelegate.swift in Sources */,
